@@ -8,6 +8,10 @@ let listContainer = document.querySelector(".list");
 
  async function getResult(){
      showContainer.innerHTML = "";
+     if (input.value === "") {
+            alert("Please Enter a Character Name");
+            return;
+     }
      const url =   `https://gateway.marvel.com:443/v1/public/characters?ts=${timestamp}&apikey=${apiKey}&hash=${HashValue}&name=${input.value}`
 ;
 
